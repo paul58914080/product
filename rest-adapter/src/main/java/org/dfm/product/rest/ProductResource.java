@@ -1,6 +1,7 @@
 package org.dfm.product.rest;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -9,6 +10,7 @@ import org.dfm.product.domain.model.Product;
 import org.dfm.product.domain.model.ProductInfo;
 import org.dfm.product.domain.port.RequestProduct;
 
+@CrossOrigin(origins = "http://localhost:3000", maxAge = 3600)
 @RestController
 @RequestMapping("/api/v1/products")
 public class ProductResource {
