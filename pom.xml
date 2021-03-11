@@ -32,6 +32,10 @@
     <jacoco-maven-plugin.version>0.8.6</jacoco-maven-plugin.version>
     <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
     <jib-maven.plugin.version>2.7.0</jib-maven.plugin.version>
+    <!-- sonar properties -->
+    <sonar.sourceEncoding>UTF-8</sonar.sourceEncoding>
+    <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
+    <project.xmlReportPath>acceptance-test/target/site/jacoco-aggregate/jacoco.xml</project.xmlReportPath>
   </properties>
   <modules>
     <module>domain</module>

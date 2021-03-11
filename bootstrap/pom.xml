@@ -10,6 +10,7 @@
   <modelVersion>4.0.0</modelVersion>
   <artifactId>bootstrap</artifactId>
   <properties>
+    <sonar.coverage.jacoco.xmlReportPaths>${project.basedir}/../${project.xmlReportPath}</sonar.coverage.jacoco.xmlReportPaths>
     <start-class>org.dfm.product.boot.ProductApplication</start-class>
   </properties>
   <dependencies>

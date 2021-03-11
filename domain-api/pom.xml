@@ -9,6 +9,9 @@
   </parent>
   <modelVersion>4.0.0</modelVersion>
   <artifactId>domain-api</artifactId>
+  <properties>
+    <sonar.coverage.jacoco.xmlReportPaths>${project.basedir}/../${project.xmlReportPath}</sonar.coverage.jacoco.xmlReportPaths>
+  </properties>
   <build>
     <plugins>
       <plugin>
