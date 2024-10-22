@@ -4,6 +4,11 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.within;
 import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDOM_PORT;
 
+import edu.ecommerce.product.domain.exception.ProductNotFoundException;
+import edu.ecommerce.product.domain.model.Product;
+import edu.ecommerce.product.domain.port.RequestProduct;
+import edu.ecommerce.product.rest.generated.model.ProblemDetail;
+import edu.ecommerce.product.rest.generated.model.ProductInfo;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.List;
@@ -19,11 +24,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.test.web.server.LocalServerPort;
 import org.springframework.http.HttpStatus;
-import edu.ecommerce.product.domain.exception.ProductNotFoundException;
-import edu.ecommerce.product.domain.model.Product;
-import edu.ecommerce.product.domain.port.RequestProduct;
-import edu.ecommerce.product.rest.generated.model.ProductInfo;
-import edu.ecommerce.product.rest.generated.model.ProblemDetail;
 
 @ExtendWith(MockitoExtension.class)
 @SpringBootTest(classes = ProductRestAdapterApplication.class, webEnvironment = RANDOM_PORT)

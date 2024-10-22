@@ -1,11 +1,11 @@
 package edu.ecommerce.product.domain;
 
-import java.util.List;
-import lombok.NonNull;
 import edu.ecommerce.product.domain.exception.ProductNotFoundException;
 import edu.ecommerce.product.domain.model.Product;
 import edu.ecommerce.product.domain.port.ObtainProduct;
 import edu.ecommerce.product.domain.port.RequestProduct;
+import java.util.List;
+import lombok.NonNull;
 
 public class ProductDomain implements RequestProduct {
 

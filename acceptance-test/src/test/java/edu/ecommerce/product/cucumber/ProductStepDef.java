@@ -3,6 +3,11 @@ package edu.ecommerce.product.cucumber;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.within;
 
+import edu.ecommerce.product.domain.model.Product;
+import edu.ecommerce.product.repository.dao.ProductDao;
+import edu.ecommerce.product.repository.entity.ProductEntity;
+import edu.ecommerce.product.rest.generated.model.ProblemDetail;
+import edu.ecommerce.product.rest.generated.model.ProductInfo;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java8.En;
 import io.cucumber.java8.HookNoArgsBody;
@@ -15,11 +20,6 @@ import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.test.web.server.LocalServerPort;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import edu.ecommerce.product.domain.model.Product;
-import edu.ecommerce.product.repository.dao.ProductDao;
-import edu.ecommerce.product.repository.entity.ProductEntity;
-import edu.ecommerce.product.rest.generated.model.ProductInfo;
-import edu.ecommerce.product.rest.generated.model.ProblemDetail;
 
 public class ProductStepDef implements En {
 

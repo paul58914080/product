@@ -3,6 +3,10 @@ package edu.ecommerce.product;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
+import edu.ecommerce.product.domain.ProductDomain;
+import edu.ecommerce.product.domain.exception.ProductNotFoundException;
+import edu.ecommerce.product.domain.model.Product;
+import edu.ecommerce.product.domain.port.ObtainProduct;
 import java.util.List;
 import java.util.Optional;
 import org.junit.jupiter.api.DisplayName;
@@ -11,10 +15,6 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
-import edu.ecommerce.product.domain.ProductDomain;
-import edu.ecommerce.product.domain.exception.ProductNotFoundException;
-import edu.ecommerce.product.domain.model.Product;
-import edu.ecommerce.product.domain.port.ObtainProduct;
 
 @ExtendWith(MockitoExtension.class)
 public class AcceptanceTest {

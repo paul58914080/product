@@ -1,5 +1,7 @@
 package edu.ecommerce.product.rest.exception;
 
+import edu.ecommerce.product.domain.exception.ProductNotFoundException;
+import edu.ecommerce.product.rest.generated.model.ProblemDetail;
 import java.time.LocalDateTime;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -7,8 +9,6 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.context.request.ServletWebRequest;
 import org.springframework.web.context.request.WebRequest;
-import edu.ecommerce.product.domain.exception.ProductNotFoundException;
-import edu.ecommerce.product.rest.generated.model.ProblemDetail;
 
 @RestControllerAdvice(basePackages = {"edu.ecommerce.product"})
 public class ProductExceptionHandler {

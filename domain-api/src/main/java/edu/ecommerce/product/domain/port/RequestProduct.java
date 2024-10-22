@@ -1,8 +1,8 @@
 package edu.ecommerce.product.domain.port;
 
+import edu.ecommerce.product.domain.model.Product;
 import java.util.List;
 import lombok.NonNull;
-import edu.ecommerce.product.domain.model.Product;
 
 public interface RequestProduct {
 
