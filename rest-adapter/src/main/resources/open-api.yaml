@@ -1,0 +1,76 @@
+---
+openapi: 3.0.1
+info:
+  title: Product API Documentation
+  version: v1
+tags:
+  - name: Product
+    description: Resource to manage product
+paths:
+  "/api/v1/products":
+    get:
+      tags:
+        - Product
+      summary: Get all products
+      operationId: getProducts
+      responses:
+        '200':
+          description: OK
+          content:
+            "*/*":
+              schema:
+                "$ref": "#/components/schemas/ProductInfo"
+  "/api/v1/products/{code}":
+    get:
+      tags:
+        - Product
+      summary: Get product by code
+      operationId: getProductByCode
+      parameters:
+        - name: code
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: OK
+          content:
+            "*/*":
+              schema:
+                "$ref": "#/components/schemas/Product"
+components:
+  schemas:
+    Product:
+      type: object
+      properties:
+        code:
+          type: integer
+          format: int64
+        description:
+          type: string
+    ProductInfo:
+      type: object
+      properties:
+        products:
+          type: array
+          items:
+            "$ref": "#/components/schemas/Product"
+    ProblemDetail:
+      type: object
+      properties:
+        type:
+          type: string
+        title:
+          type: string
+        status:
+          type: integer
+          format: int32
+        detail:
+          type: string
+        instance:
+          type: string
+        timestamp:
+          type: string
+          format: date-time
