@@ -1,4 +1,4 @@
-# Title
+# Product service
 
 <!-- 
 this project was generated with https://github.com/devs-from-matrix/basic-template-repository. 
@@ -8,11 +8,31 @@ this project was generated with https://github.com/devs-from-matrix/basic-templa
 
 ## How to build ?
 
-<!-- mention the steps for building this project -->
+### Local jar
+
+```shell
+mvn clean install
+```
+
+### Docker image
+
+```shell
+docker build -t ecommerce/product-service -f .docker/Dockerfile .
+```
 
 ## How to start ?
 
-<!-- mention the steps for starting or serving this project -->
+### Local jar
+
+```shell
+mvn spring-boot:run
+```
+
+### Docker image
+
+```shell
+docker run -p 3001:8080 ecommerce/product-service
+```
 
 ## Contribution guidelines
 
